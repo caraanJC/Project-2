@@ -12,6 +12,7 @@ const loginCloseBtn = document.getElementById('loginCloseBtn');
 const signUpCloseBtn = document.getElementById('signUpCloseBtn');
 const login = document.getElementById('login');
 const signUp = document.getElementById('signUp');
+const loginFormRegisterLink = document.getElementById('loginFormRegisterLink');
 
 // const registerLink = document.getElementById('registerLink');
 // const register = document.getElementById('register');
@@ -78,4 +79,9 @@ signUpCloseBtn.onclick = (e) => {
 generateBtn.onclick = () => {
   qrCode.innerHTML = `<img src="./assets/images/mobile_size/qr-code.png" alt="qr code">`;
   qrCode.classList.add('show');
+};
+
+loginFormRegisterLink.onclick = () => {
+  loginForm.classList.remove('show');
+  signUpForm.classList.add('show');
 };

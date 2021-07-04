@@ -73,6 +73,7 @@ nav .navList {
   -ms-transition: transform 0.3s linear;
   -o-transition: transform 0.3s linear;
   transform-origin: 100% 0 0;
+  padding-top: 50px;
 }
 
 nav .navList button {
@@ -693,30 +694,9 @@ form.login-form p a {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-  .footer .social,
-  .footer .copyright {
+  .footer .contact,
+  .footer .group {
     width: 50%;
-  }
-
-  .footer .contact {
-    width: 100%;
-  }
-
-  .footer .contact h3 {
-    color: #dead6a;
-    font-size: 45px;
-  }
-
-  .footer .contact * {
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  .footer .social {
-    border: none;
-    display: flex;
-    justify-content: space-around;
   }
 }
 
@@ -733,13 +713,26 @@ form.login-form p a {
     font-size: 35px;
   }
 
+  form.login-form input,
+  form.login-form button,
+  form.signUp-form input,
+  form.signUp-form button {
+    width: 30%;
+  }
+
   .reviews .users {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .footer .contact * {
-    width: 30%;
+    width: 50%;
     margin: 0 auto;
+  }
+
+  .footer .group .social {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   #wash {
