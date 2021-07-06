@@ -567,6 +567,12 @@ form.login-form p a {
   body {
     padding-top: 6%;
   }
+
+  form.login-form,
+  form.signUp-form {
+    top: 10%;
+  }
+
   nav {
     height: 10%;
   }
@@ -731,6 +737,7 @@ form.login-form p a {
   body {
     padding-top: 4%;
   }
+
   .generate .qr-code {
     height: 412px;
   }
