@@ -230,15 +230,14 @@ form.login-form p a {
   margin-top: 70px;
   padding: 10px;
   width: 100%;
-  max-width: 425px;
+  height: 100%;
   border-bottom: 1px solid #26263e;
   margin-bottom: 10px;
 }
 
 .generate .qr-code {
-  min-height: 300px;
+  height: 300px;
   width: 100%;
-  height: 100%;
   background-color: #26273b;
   display: grid;
   place-items: center;
@@ -414,6 +413,15 @@ form.login-form p a {
   background-color: #313247;
 }
 
+.footer .logo {
+  display: none;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #efeef4;
+}
+
 .footer h3 {
   font-size: 40px;
   margin-bottom: 10px;
@@ -422,6 +430,10 @@ form.login-form p a {
 
 .footer .contact {
   width: 100%;
+}
+
+.footer .contact h3 {
+  color: #efeef4;
 }
 
 .footer .contact form {
@@ -480,58 +492,15 @@ form.login-form p a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
-  #wash {
-    content: url('../images/tablet/wash\ hands.jpg');
+@media screen and (min-width: 375px) {
+  .generate .qr-code {
+    height: 355px;
   }
-  #mask {
-    content: url('../images/tablet/face-mask.jpg');
-  }
-  #social-distancing {
-    content: url('../images/tablet/social-distancing.jpg');
-  }
-  #sleep {
-    content: url('../images/tablet/sleep.jpg');
-  }
-  #jeff {
-    content: url('../images/tablet/jeff.jpg');
-  }
-  #elon {
-    content: url('../images/tablet/elon.jpg');
-  }
-  #simon {
-    content: url('../images/tablet/simon.jpg');
-  }
-  #gates {
-    content: url('../images/tablet/gates.jpg');
-  }
+}
 
-  nav .logo,
-  nav .burger i {
-    font-size: 40px;
-  }
-
-  .about-vacseen p {
-    font-size: 25px;
-  }
-
-  .about-vacseen h2 {
-    font-size: 45px;
-  }
-
-  .gallery figcaption {
-    font-size: 30px;
-  }
-
-  .reviews {
-    width: 100%;
-  }
-  .reviews .users .user .name {
-    font-size: 30px;
-  }
-
-  .reviews .users .user .comment {
-    font-size: 20px;
+@media screen and (min-width: 425px) {
+  .generate .qr-code {
+    height: 405px;
   }
 }
 
@@ -564,6 +533,10 @@ form.login-form p a {
   nav .logo,
   nav .burger i {
     font-size: 40px;
+  }
+
+  .generate .qr-code {
+    height: 748px;
   }
 
   .about-vacseen p {
@@ -592,23 +565,54 @@ form.login-form p a {
 
 @media screen and (min-width: 1024px) {
   body {
+    padding-top: 6%;
+  }
+  nav {
+    height: 10%;
+  }
+
+  nav .burger {
+    display: none;
+  }
+
+  nav .navList {
+    transform: scale(1);
+    position: relative;
+    top: 0;
+    width: 80%;
+    background-color: transparent;
+    flex-direction: row;
+    margin-top: auto;
+    height: auto;
+    padding: 0;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+
+  nav .navList button {
+    display: none;
+  }
+  body {
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   .generate {
-    width: 70%;
+    width: 30%;
     margin-top: 86px;
     border: none;
     max-width: 60%;
   }
 
   .generate .qr-code {
-    min-height: 500px;
+    height: 300px;
   }
 
   .gallery {
-    width: 30%;
-    order: 0;
+    width: 60%;
+    order: -1;
     margin-top: 70px;
     border: none;
   }
@@ -618,42 +622,52 @@ form.login-form p a {
     flex-wrap: wrap;
   }
 
+  .about-vacseen > div {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: calc(50% - 20px);
+    margin: 10px;
+    background-color: #313247;
+    padding: 10px;
+  }
+
   .about-vacseen p {
     border: none;
+    color: #efeef4;
+    font-size: 30px;
+  }
+
+  .about-vacseen h3 {
+    font-size: 35px;
+    color: #efeef4;
+  }
+
+  .about-vacseen .personal {
+    width: 100%;
   }
 
   .about-vacseen .what-is-it {
-    width: 50%;
     padding: 10px;
-    background-color: #313247;
   }
 
   .about-vacseen .what-is-it p {
     margin-top: 55px;
   }
 
-  .about-vacseen .benefits {
-    padding: 10px;
-    width: 50%;
-  }
   .about-vacseen .disclaimer {
-    width: 50%;
-    min-height: 190px;
-    padding: 10px;
-    margin-bottom: 20px;
     border-bottom: none;
-    text-align: center;
   }
 
   .about-vacseen .disclaimer p {
     border-bottom: none;
-  }
-
-  .about-vacseen .avail {
-    padding: 10px;
-    width: 50%;
-    text-align: center;
-    background-color: #313247;
   }
 
   .reviews h2 {
@@ -694,23 +708,31 @@ form.login-form p a {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .footer .contact,
+
+  .footer .contact {
+    width: 40%;
+  }
+
+  .footer .contact h3 {
+    font-size: 45px;
+  }
+
+  .footer .logo,
   .footer .group {
-    width: 50%;
+    width: 30%;
+  }
+
+  .footer .logo {
+    display: block;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  nav .navList {
-    width: 50%;
+  body {
+    padding-top: 4%;
   }
-
-  nav .navList button {
-    font-size: 30px;
-  }
-
-  nav .navList a {
-    font-size: 35px;
+  .generate .qr-code {
+    height: 412px;
   }
 
   form.login-form input,
@@ -720,13 +742,12 @@ form.login-form p a {
     width: 30%;
   }
 
-  .reviews .users {
-    grid-template-columns: repeat(4, 1fr);
+  .about-vacseen {
+    width: 80%;
   }
 
-  .footer .contact * {
-    width: 50%;
-    margin: 0 auto;
+  .reviews .users {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .footer .group .social {
